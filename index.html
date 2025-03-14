@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Voce me acha bonito</h2>
+        <button class="btn" onclick="SIM()">SIM</button>
+        <button class="btn" onmouseover="desvia(this)">NAO</button>
+    </div>
+</body>
+
+<script>
+    function SIM (){
+        alert("SABIA")
+    }
+
+    function desvia(t){
+        var btn = t;
+        btn.style.position="absolute";
+        btn.style.bottom=geraPosicao(10, 90);
+        btn.style.left=geraPosicao(10, 90);
+        console.log("Opa, seu otario")
+    }
+
+    function geraPosicao(min, max){
+        return Math.random() * (max - min) + "%";
+    }
+</script>
+</html>
+
